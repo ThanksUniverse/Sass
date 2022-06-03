@@ -1,0 +1,12 @@
+.cars { //É possível definir regras elementos dentro de classes para fácil organização
+    h2 {
+        color: $color-02;
+    }
+    li {
+        color: $color-04;
+
+        a {
+            background-color: $color-default;
+        }
+    }
+}
