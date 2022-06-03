@@ -60,27 +60,31 @@
                color: green;
             }
             ```
-<!-- ## Partials
-- Modularizar o código
-- snippets 
 
+         ## Partials
+				- Modularizar o código
+				- Snippets
+				- Fácil de reutilizar em projetos diferentes
+				- Separar edição de clases por vários arquivos SCSS e depois dar @import 'name';			 ( Adicionar underline na frente do nome pois é oque define um arquivo como Partial )		
 
-## Code Together
+            ### TODO: 
+            ```
 
-1. ter no node instalado
-2. instalar o sass (https://sass-lang.com/install):
-```
-npm install -g sass    
-```
-3. criar projeto ou clonar o repositório 
-4. criar ou alterar arquivo style.scss
-5. rodar o comando para processar o css:
-```
-sass ./scss/style.scss ./css/style.css 
-```
+            1. Ter o node instalado
+            2. Instalar o sass (https://sass-lang.com/install):
+            ```
+            npm install -g sass    
+            ```
+            3. Criar ou clonar o reposítório
+            4. Criar ou alterar o arquivo style.scss
+            5. Transpilar o código utilizando o comando:
+            ```
+            sass ./scss/style.scss ./css/style.css 
+            ```
 
-6. customizar o projeto 
-7. salvar alterações
-8. comitar no seu repositório
-9. enviar o link do repositório para o portal da EBAC
- -->
+            6. Customizar o projeto
+            7. Salvar alterações
+            8. Comitar no seu repositório
+            9. Enviar o link do repositório
+
+            ```
