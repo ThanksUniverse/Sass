@@ -16,12 +16,17 @@ $('document').ready( function() { //Executar ao carregar a página
    
    //? Irá mudar a classe do elemento e a cor do header/body/footer/destack
   function changeTheme() {
+
+      let src = ($('#logo').attr('src') === './images/logo-default.png') ? './images/logo-darkMode.png' : './images/logo-default.png'
+
 		$('header div').toggleClass('dark')
       $('body').toggleClass('default')
       $('body').toggleClass('dark')
       $('#destack').toggleClass('destack')
       $('#destack').toggleClass('destackb')
-      $("#defaults").toggleClass("dark");
+      $("#defaults").toggleClass("dark")
+      $('#logo').attr('src', src)
+      
   }
 
 
