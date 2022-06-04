@@ -69,7 +69,6 @@
 
    ### TODO: 
       ```
-
       1. Ter o node instalado
       2. Instalar o sass (https://sass-lang.com/install):
       ```
@@ -81,10 +80,8 @@
       ```
       sass ./scss/style.scss ./css/style.css 
       ```
-
       6. Customizar o projeto
       7. Salvar alterações
       8. Comitar no seu repositório
       9. Enviar o link do repositório
-
       ```
