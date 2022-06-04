@@ -1,12 +1,13 @@
 .cars { //É possível definir regras elementos dentro de classes para fácil organização
     h2 {
-        color: $color-02;
+        color: $colorHighlight;
+        margin-left: 15px;
     }
     li {
-        color: $color-04;
+        color: $defaultTertiary;
 
         a {
-            background-color: $color-default;
+            background-color: $colorBlack;
         }
     }
 }
