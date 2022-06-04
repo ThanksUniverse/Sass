@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Módulo Sass</title>
 </head>
-<body>
+<body class="default">
     <header>
         <div class="header">
             <!--? Adicionar botão para dark Mode -->
             <!--? Adicionar botão para abrir sobre mim ( foto )-->
             <!--? Adicionar logo centralizada ( foto )-->
-            <div class="default"></div>
-            <img src="./images/img.jpg" alt="Perfil" id="profile">
-            <center> <img src="./images/logo-default.png" alt="Logo (Pedro Cars)" id="logo"> </center> 
+            <div class="default changeTheme" onclick="changeTheme()" ></div>
+            <img src="./images/img.jpg" alt="Perfil" id="profile" class="modal-pedro" rel="aboutme">
+            <center> <img src="./images/logo-default.png" alt="Logo (Pedro Cars)" id="logo" > </center> 
         </div>
     </header>
-    <section>
-        <div class="destack">
+    <section id="defaults">
+        <div class="destack" id="destack">
             <div class="container">
                 <h1>Audi A5</h1>
                 <h2>Destaque</h2>
@@ -27,7 +28,7 @@
                 <p>Carro seminovo, 4 portas, completo com ar-condicionado, vidro e travas elelétricas.</p>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="defaults">
             <div class="blocks cars">
                 <h2>Ver Carros</h2>
                 <ul>
@@ -58,12 +59,42 @@
             <p> &copy; Editado por Pedro. <small> &copy; Desenvolvido por Marcelo.</small></p>
         </div>
     </footer>
+
+<!--About Me-->
+<div id="aboutme" class="aboutme visually-hidden">
+    <div class="aboutme">
+        <div class="aboutmeimg">
+            <img src="./images/img.jpg" alt="Pedro">
+        </div>
+        <div class="aboutmetxt">
+            <h3>Pedro</h3>
+            <h5>Full Stack Developer</h5>
+        </div>
+        <div class="aboutmebtn">
+            <a name="Twitter" id="Twitter" class="btn btn-info rounded-3" target="_blank"
+                href="https://twitter.com/ThanksUniverse_" role="button">Twitter</a>
+            <a name="ThanksUniverse" id="ThanksUniverse" target="_blank" class="btn btn-dark rounded-3"
+                href="https://Github.com/ThanksUniverse" role="button">Github</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-pedro" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/jquery/jquery-3.6.0.min.js"></script>
+<script src="./js/custom.js"></script>
+
 </body>
 </html>
-
-
-<!--DONE: Customizar totalmente o projeto-->
-<!--DOING: Adicionar uma nova classe com modal para o ver mais-->
-<!--TODO: Adicionar o sobre mim no site também-->
-<!--TODO: Fazer um dark mode com o JavaScript-->
-<!--TODO: Se possível fazer o projeto dentro do gulp-->

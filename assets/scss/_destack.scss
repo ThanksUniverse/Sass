@@ -29,3 +29,35 @@
         text-align: center;
     }
 }
+
+.destackb {
+    background-color: $darkTertiary;
+    h1 {
+        color: $defaultTertiary;
+        font-size: $fontBig;
+        float: left;
+        margin-left: 20px;
+    }
+
+    h2 {
+        float: left;
+        font-size: $fontSmall;
+        color: $colorWhite;
+        margin-top: 1.5rem;
+        margin-left: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: $space-default;
+        border-radius: 20px;
+    }
+
+    p {
+        font-size: $fontMedium;
+        color: $colorWhite;
+        font-weight: 700;
+        text-align: center;
+    }
+}
