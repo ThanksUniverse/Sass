@@ -104,7 +104,7 @@ gulp.task('server', function() {	//*Outra forma de criar funções
 	gulp.watch('./assets/images/*').on('change', reload)
 	gulp.watch('./assets/js/*').on('change', reload)		
 	gulp.watch('./assets/index.html').on('change', reload)		
-	
+	console.log('tasks complete...')
 
 }) 
 
