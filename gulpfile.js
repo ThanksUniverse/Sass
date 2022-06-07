@@ -12,6 +12,15 @@ const borwserSync = require('browser-sync').create()
 const reload = browserSync.reload
 const sass = require('gulp-sass')( require('node-sass'))
 
+function tarefasSASS(callback) {
+	gulp
+		.src("./assets/scss/**/*.scss") //! gulp.src (define a fonte)
+		.pipe(sass()) //! pipe transforma o sass para css
+		.pipe(gulp.dest("./assets/css/")); //!Envia para a pasta do CSS para fazer os procedimentos
+
+	return callback();
+}
+
 function tarefasCSS(cb) {
 	 gulp.src([
 			"./node_modules/bootstrap/dist/css/bootstrap.css",
@@ -29,13 +38,6 @@ function tarefasCSS(cb) {
 		cb()
 }
 
-function tarefasSASS(cb) {
-	gulp.src('./assets/scss/**/*.scss') //! gulp.src (define a fonte)
-		.pipe(sass()) //! pipe transforma o sass para css
-		.pipe(gulp.dest('./assets/css/'))
-	
-		cb()
-}
 
 function tarefasJS(callback) {
 	gulp.src([
@@ -88,32 +90,39 @@ function tarefasHTML(callback) {
 };
 
 gulp.task('server', function() {	//*Outra forma de criar funções
-
+	
 	browserSync.init({
 		server: {
 			baseDir: "./dist"
 		}
 	})
-	gulp.watch("./assets/**/*").on("change", process);	//*Fica observando os arquivos para que atualize a página sempre que a pasta dist for atualizada
-	gulp.watch('./assets/**/*').on('change', reload)
+	gulp.watch("./assets/scss/*").on("change", process);	//*Fica observando os arquivos para que atualize a página sempre que a pasta dist for atualizada
+	gulp.watch("./assets/images/*").on("change", process);	//*Fica observando os arquivos para que atualize a página sempre que a pasta dist for atualizada
+	gulp.watch("./assets/js/*").on("change", process);	//*Fica observando os arquivos para que atualize a página sempre que a pasta dist for atualizada
+	gulp.watch("./assets/index.html").on("change", process);	//*Fica observando os arquivos para que atualize a página sempre que a pasta dist for atualizada
+	gulp.watch('./assets/scss/*').on('change', reload)
+	gulp.watch('./assets/images/*').on('change', reload)
+	gulp.watch('./assets/js/*').on('change', reload)		
+	gulp.watch('./assets/index.html').on('change', reload)		
+	
+
 }) 
 
-function done(cb) {
+/* function done(callback) {
 	console.log('Done')
-	return cb()
-}
+} */
 
 //* Series x Parallel
 //* Series: Faz as funções em ordem
 //* Parallel: Faz todas as funções ao mesmo tempo
 
-const process = series( tarefasHTML, tarefasJS, tarefasSASS, tarefasCSS, done);
+const process = series(tarefasHTML, tarefasJS, tarefasSASS, tarefasCSS);
 
-exports.styles = tarefasCSS;
-exports.scripts = tarefasJS;
 exports.html = tarefasHTML;
-exports.images = tarefasIMG;
+exports.scripts = tarefasJS;
 exports.sass = tarefasSASS;
+exports.styles = tarefasCSS;
+exports.images = tarefasIMG;
 
 
 exports.default = process
