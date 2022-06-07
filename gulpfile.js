@@ -5,10 +5,11 @@ const cssmin = require("gulp-cssmin");
 const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const images = require("gulp-imagemin");
+const stripJs = require('gulp-strip-comments')
+const stripCssComments = require('gulp-strip-css-comments');
 const htmlmin = require("gulp-htmlmin");
 const babel = require('gulp-babel');
-const browserSync = require("browser-sync");
-const borwserSync = require('browser-sync').create()
+const browserSync = require('browser-sync').create()
 const reload = browserSync.reload
 const sass = require('gulp-sass')( require('node-sass'))
 
@@ -29,7 +30,7 @@ function tarefasCSS(cb) {
 			"./vendor/jquery-ui/jquery-ui.css",
 			"./assets/css/style.css" 
 			])
-			/* .pipe(stripCss()) //!Remove Comentários  */
+			.pipe(stripCssComments()) //!Remove Comentários  
 			.pipe(concat("style.css")) //!Mescla Arquivos
 			.pipe(cssmin()) //!Minifica CSS
 			.pipe(rename({ suffix: ".min" })) //!style.min.css
@@ -49,6 +50,7 @@ function tarefasJS(callback) {
 		 "./vendor/jquery-mask/jquery.mask.js",
 		  "./assets/js/custom.js"
 		])
+		.pipe(stripJs())
 		.pipe(babel({
 			comments: false,
 			presets: ['@babel/env'],
