@@ -13,13 +13,11 @@ const browserSync = require('browser-sync').create()
 const reload = browserSync.reload
 const sass = require('gulp-sass')( require('node-sass'))
 
-function tarefasSASS(callback) {
-	gulp
+function tarefasSASS() {
+	return gulp
 		.src("./assets/scss/**/*.scss") //! gulp.src (define a fonte)
 		.pipe(sass()) //! pipe transforma o sass para css
 		.pipe(gulp.dest("./assets/css/")); //!Envia para a pasta do CSS para fazer os procedimentos
-
-	return callback();
 }
 
 function tarefasCSS(cb) {
