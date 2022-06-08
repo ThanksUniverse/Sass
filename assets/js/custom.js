@@ -26,10 +26,16 @@ $('document').ready( function() { //Executar ao carregar a página
       $(".header__button").toggleClass("dark");
       $('#destack').toggleClass('destack')
       $('#destack').toggleClass('destackb')
+      $("#destack > div > p").toggleClass('destack__description')
+      $("#destack > div > p").toggleClass('destackb__description')
       $("#defaults").toggleClass("dark")
       $('#logo').attr('src', src)
       
   }
+
+  $('#logo').on('click', function() {
+     location.reload()
+  })
 
 
 let randomFooter = "#" + Math.floor(Math.random() * 15921905).toString(16);
