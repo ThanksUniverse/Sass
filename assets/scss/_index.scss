@@ -11,6 +11,12 @@ body {
 
 footer {
    background-color: $defaultSecondary;
+   @media ( max-width: 999px ) {
+   clear: both;
+    position: relative;
+    height: 10px;
+    width: 100%;
+   }
 }
 
 }

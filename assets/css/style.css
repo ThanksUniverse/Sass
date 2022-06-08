@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   border: 0;
   margin: 0;
@@ -71,62 +72,6 @@ footer {
   background-color: #333;
 }
 
-.blocks {
-  padding: 3rem 0;
-}
-.blocks h2 {
-  color: #fff;
-}
-.blocks ul {
-  list-style-type: none;
-  font-size: 1.3rem;
-  display: flex;
-  justify-content: space-between;
-  height: 250px;
-  padding: 1rem 0;
-  width: 100%;
-}
-.blocks li {
-  color: #ff0;
-  display: block;
-  margin: 1.5rem auto;
-  width: 30%;
-}
-.blocks li .img-container {
-  display: block;
-  height: 200px;
-  overflow: hidden;
-  width: 100%;
-}
-.blocks li a {
-  background-color: #fff;
-  border-radius: 5px;
-  color: white;
-  display: block;
-  font-size: 1.9rem;
-  margin: 2.4rem auto 1.5rem;
-  padding: 4px 8px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.cars h2 {
-  border: 1px solid Black;
-  background-color: #888;
-  color: #ff4040;
-  margin-left: 15px;
-}
-.cars .destack {
-  border: 1px solid #fff;
-  background-color: #888;
-}
-.cars li {
-  color: #60cdff;
-}
-.cars li a {
-  background-color: #000;
-}
-
 .destack {
   background-color: #ededed;
 }
@@ -185,6 +130,96 @@ footer {
   text-align: center;
 }
 
+.cars__title {
+  color: #ff0;
+}
+.cars__item {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #ff0;
+  display: flex;
+  float: left;
+  height: max-content;
+  justify-content: center;
+  align-items: baseline;
+  flex-flow: column;
+}
+.cars__item--destack {
+  border: 1px solid #fff;
+  background-color: #888;
+}
+.cars__button {
+  background-color: #111;
+}
+
+.blocks {
+  /* 
+    ## BEM CSS = Block Element Modifier
+     - Melhor noção de como organizar o CSS, ficar mais fácil de ser entendida
+     - Padrão do Projeto / Design Paterns
+     - Exemplo: .cars__title :: Sass: &__title
+     - cars__title
+     - cars__list
+     - cars__item
+     - cars__item--destack
+     - cars__img-container
+     - cars__button 
+         */
+  padding: 3rem 0;
+}
+.blocks__title {
+  color: #fff;
+}
+.blocks__list {
+  list-style-type: none;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding: 1rem 0;
+  width: 100%;
+}
+@media (max-width: 999px) {
+  .blocks__list {
+    display: block;
+    float: left;
+  }
+}
+.blocks__img-container {
+  display: block;
+  height: 15rem;
+  overflow: hidden;
+  width: 100%;
+}
+@media (max-width: 999px) {
+  .blocks__img-container {
+    height: 20rem;
+  }
+}
+.blocks__item {
+  color: #ff0;
+  display: block;
+  margin: 1.5rem auto;
+  width: 33%;
+  text-align: center;
+}
+@media (max-width: 999px) {
+  .blocks__item {
+    width: calc(99% - 30px);
+  }
+}
+.blocks__button {
+  background-color: #333333;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 1.9rem;
+  margin: 2.4rem auto 1.5rem;
+  padding: 0.5rem 3rem;
+  text-align: center;
+  text-decoration: none;
+}
+
 .default header {
   background-color: #dadada;
   padding: 0;
@@ -194,6 +229,14 @@ footer {
 }
 .default footer {
   background-color: #dadada;
+}
+@media (max-width: 999px) {
+  .default footer {
+    clear: both;
+    position: relative;
+    height: 10px;
+    width: 100%;
+  }
 }
 
 .dark {

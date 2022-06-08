@@ -1,25 +1,31 @@
 @mixin theme($theme: $color-01, $bg: $color-04) {
-    border: 1px solid $theme;
-    background-color: $bg;
+	border: 1px solid $theme;
+	background-color: $bg;
 }
 
-.cars { //É possível definir regras elementos dentro de classes para fácil organização
-    h2 {
-        @include theme($theme: Black);
-        color: $colorHighlight;
-        margin-left: 15px;
-    }
+.cars {
 
-    .destack {
-        @include theme;
+    &__title {
+        color: $color-02;
     }
-    li {
-        color: $defaultTertiary;
+    
+    &__item {
+        @include theme($theme: #ccc, $bg: #fff);
+        color: $color-02;
+        display: flex;
+        float: left;
+        height: max-content;
+        justify-content: center;
+        align-items: baseline;
+        flex-flow: column;
 
-        a {
-            background-color: $colorBlack;
+        &--destack {
+            @include theme;
         }
 
     }
-}
 
+    &__button {
+        background-color: $color-default;
+    }
+}
