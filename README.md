@@ -17,4 +17,6 @@
 
    ```
    1. Execute o arquivo start
+
+   Requirements: Node.js; npm
    ```

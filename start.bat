@@ -1,5 +1,7 @@
 @echo on
-color a
-npm i gulp browserSync
+color c
 cls
-gulp server
+call npm i 
+cls
+call gulp server
+pause
