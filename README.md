@@ -5,7 +5,7 @@
 
    2. Executar o comando:
 
-   npm i gulp browserSync
+   npm install
 
    3. Abrir o servidor utilizando:
    
