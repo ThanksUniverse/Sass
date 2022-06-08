@@ -112,12 +112,6 @@ function html() {
    .pipe(gulp.dest(paths.html.dest))
 }
 
-function watch() {
-
-}
-
-
-let normalbuild = gulp.series ( sassf, css, js, html )
 let build = gulp.series ( sassf, css, js, html )
 let fullbuild = gulp.series ( sassf, css, js, html, img )
 
@@ -127,6 +121,5 @@ exports.img = img;
 exports.js = js;
 exports.css = css;
 
-exports.nbuild= normalbuild;
 exports.fbuild = fullbuild;
 exports.default = build
