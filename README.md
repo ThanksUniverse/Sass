@@ -12,3 +12,9 @@
    gulp server
 
    ```
+
+### Executar o Projeto (2):
+
+   ```
+   1. Execute o arquivo start
+   ```
