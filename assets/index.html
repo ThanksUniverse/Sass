@@ -14,18 +14,18 @@
             <!--? Adicionar botão para dark Mode -->
             <!--? Adicionar botão para abrir sobre mim ( foto )-->
             <!--? Adicionar logo centralizada ( foto )-->
-            <img class="default changeTheme" onclick="changeTheme()" disabled ></img>
-            <img src="./images/img.jpg" alt="Perfil" id="profile" class="modal-pedro" rel="aboutme">
-            <center> <img src="./images/logo-default.png" alt="Logo (Pedro Cars)" id="logo" > </center> 
+            <img class="default changeTheme header__button" onclick="changeTheme()" disabled ></img>
+            <img src="./images/img.jpg" alt="Perfil" id="profile" class="modal-pedro header__profile" rel="aboutme">
+            <center> <img class="header__logo" src="./images/logo-default.png" alt="Logo (Pedro Cars)" id="logo" > </center> 
         </div>
     </header>
     <section id="defaults">
         <div class="destack" id="destack">
             <div class="container">
-                <h1>Audi A5</h1>
-                <h2>Destaque</h2>
-                <img src="./images/pexels-mike-244206.jpg" alt="Foto Audi por Mike em Pexels">
-                <p>Carro seminovo, 4 portas, completo com ar-condicionado, vidro e travas elelétricas.</p>
+                <h1 class="destack__title">Audi A5</h1>
+                <h2 class="destack__subtitle">Destaque</h2>
+                <img class="destack__img" src="./images/pexels-mike-244206.jpg" alt="Foto Audi por Mike em Pexels">
+                <p class="destack__description">Carro seminovo, 4 portas, completo com ar-condicionado, vidro e travas elelétricas.</p>
             </div>
         </div>
         <div class="container" id="defaults">
@@ -64,16 +64,16 @@
 <div id="aboutme" class="aboutme visually-hidden">
     <div class="aboutme">
         <div class="aboutmeimg">
-            <img src="./images/img.jpg" alt="Pedro">
+            <img class="aboutmeimg__img" src="./images/img.jpg" alt="Pedro">
         </div>
         <div class="aboutmetxt">
-            <h3>Pedro</h3>
-            <h5>Full Stack Developer</h5>
+            <h3 class="aboutme__name aboutmetxt__name">Pedro</h3>
+            <h5 class="aboutme_description aboutmetxt__description">Full Stack Developer</h5>
         </div>
         <div class="aboutmebtn">
-            <a name="Twitter" id="Twitter" class="btn btn-info rounded-3" target="_blank"
+            <a name="Twitter" id="Twitter" class="btn btn-info rounded-3 aboutmebtn__button" target="_blank"
                 href="https://twitter.com/ThanksUniverse_" role="button">Twitter</a>
-            <a name="ThanksUniverse" id="ThanksUniverse" target="_blank" class="btn btn-dark rounded-3"
+            <a name="ThanksUniverse" id="ThanksUniverse" target="_blank" class="btn btn-dark rounded-3 aboutmebtn__button"
                 href="https://Github.com/ThanksUniverse" role="button">Github</a>
         </div>
     </div>

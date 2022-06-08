@@ -22,6 +22,8 @@ $('document').ready( function() { //Executar ao carregar a página
 		$('header div').toggleClass('dark')
       $('body').toggleClass('default')
       $('body').toggleClass('dark')
+      $(".header__button").toggleClass("default");
+      $(".header__button").toggleClass("dark");
       $('#destack').toggleClass('destack')
       $('#destack').toggleClass('destackb')
       $("#defaults").toggleClass("dark")

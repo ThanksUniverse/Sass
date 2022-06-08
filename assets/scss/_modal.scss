@@ -4,12 +4,12 @@
 	margin: 0 auto;
 	border-radius: 15px;
 
-	h3 {
+	&__name {
 		color: $colorBlack;
 		font-size: $fontMedium;
 	}
 
-	h5 {
+	&__description {
 		color: $colorBlack;
 		font-size: $fontBig;
 	}
@@ -22,28 +22,33 @@
 	margin: 0 auto;
 	width: 50%;
 
-	img {
+	&__img {
 		position: relative;
 		overflow: hidden;
 		max-width: 100%;
 		border-radius: 50%;
 		margin: 0 auto;
 		bottom: 50px;
+		&:hover {
+			box-shadow: 0 0 10px black;
+		}
 	}
 }
 
 .aboutmetxt {
-	h5 {
+	&__description {
 		position: relative;
 		bottom: 50px !important;
 		text-align: center;
+		font-size: $fontMedium;
+		font-weight: 600;
 	}
 
-	p,
-	h3 {
+	&__name {
 		position: relative;
 		bottom: 40px;
 		text-align: center;
+		font-size: $fontBig;
 	}
 }
 
@@ -51,12 +56,15 @@
 	width: 90%;
 	margin: 0 auto;
 
-	a {
+	&__button {
 		position: relative;
 		width: 49%;
 		bottom: 54px;
 		color: $colorWhite;
 		font-size: $fontMedium;
+		&:hover{
+			box-shadow: 0 0 5px black;
+		}
 	}
 }
 
@@ -74,3 +82,8 @@
 #modal-pedro > div > div > div.modal-header {
 	background-color: transparent;
 }
+
+#ThanksUniverse:hover {
+	color: $colorHighlight !important; 
+}
+

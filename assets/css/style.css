@@ -75,26 +75,26 @@ footer {
 .destack {
   background-color: #ededed;
 }
-.destack h1 {
+.destack__title {
   color: #60cdff;
   font-size: 2rem;
   float: left;
   margin-left: 20px;
 }
-.destack h2 {
+.destack__subtitle {
   float: left;
   font-size: 1.3rem;
   color: #000;
   margin-top: 1.5rem;
   margin-left: 10px;
 }
-.destack img {
+.destack__img {
   width: 100%;
   height: auto;
   margin: 1.5rem;
   border-radius: 20px;
 }
-.destack p {
+.destack__description {
   font-size: 1.6rem;
   color: #000;
   font-weight: 700;
@@ -104,26 +104,26 @@ footer {
 .destackb {
   background-color: #535353;
 }
-.destackb h1 {
+.destackb__title {
   color: #60cdff;
   font-size: 2rem;
   float: left;
   margin-left: 20px;
 }
-.destackb h2 {
+.destackb__subtitle {
   float: left;
   font-size: 1.3rem;
   color: #fff;
   margin-top: 1.5rem;
   margin-left: 10px;
 }
-.destackb img {
+.destackb__img {
   width: 100%;
   height: auto;
   margin: 1.5rem;
   border-radius: 20px;
 }
-.destackb p {
+.destackb__description {
   font-size: 1.6rem;
   color: #fff;
   font-weight: 700;
@@ -253,13 +253,13 @@ footer {
   background-color: #535353;
 }
 
-.header #logo {
+.header__logo {
   height: 140px;
   width: 140px;
   max-width: 100%;
   cursor: pointer;
 }
-.header #profile {
+.header__profile {
   height: 100px;
   width: 100px;
   float: left;
@@ -269,8 +269,7 @@ footer {
   margin-top: 1.5rem;
   cursor: pointer;
 }
-.header .default {
-  content: url(../images/dark.webp);
+.header__button {
   height: 40px;
   width: 40px;
   float: right;
@@ -280,15 +279,11 @@ footer {
   transform: translateY(40px);
   cursor: pointer;
 }
+.header .default {
+  content: url(../images/dark.webp);
+}
 .header .dark {
   content: url(../images/light.png);
-  height: 40px;
-  width: 40px;
-  float: right;
-  max-width: 100%;
-  border-radius: 50%;
-  margin-right: 1.5rem;
-  transform: translateY(40px);
 }
 .header div.header {
   width: 50%;
@@ -301,11 +296,11 @@ footer {
   margin: 0 auto;
   border-radius: 15px;
 }
-.aboutme h3 {
+.aboutme__name {
   color: #000;
   font-size: 1.6rem;
 }
-.aboutme h5 {
+.aboutme__description {
   color: #000;
   font-size: 2rem;
 }
@@ -317,7 +312,7 @@ footer {
   margin: 0 auto;
   width: 50%;
 }
-.aboutmeimg img {
+.aboutmeimg__img {
   position: relative;
   overflow: hidden;
   max-width: 100%;
@@ -325,29 +320,37 @@ footer {
   margin: 0 auto;
   bottom: 50px;
 }
+.aboutmeimg__img:hover {
+  box-shadow: 0 0 10px black;
+}
 
-.aboutmetxt h5 {
+.aboutmetxt__description {
   position: relative;
   bottom: 50px !important;
   text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
-.aboutmetxt p,
-.aboutmetxt h3 {
+.aboutmetxt__name {
   position: relative;
   bottom: 40px;
   text-align: center;
+  font-size: 2rem;
 }
 
 .aboutmebtn {
   width: 90%;
   margin: 0 auto;
 }
-.aboutmebtn a {
+.aboutmebtn__button {
   position: relative;
   width: 49%;
   bottom: 54px;
   color: #fff;
   font-size: 1.6rem;
+}
+.aboutmebtn__button:hover {
+  box-shadow: 0 0 5px black;
 }
 
 #modal-pedro > div > div > div.modal-body {
@@ -363,6 +366,10 @@ footer {
 
 #modal-pedro > div > div > div.modal-header {
   background-color: transparent;
+}
+
+#ThanksUniverse:hover {
+  color: #ff4040 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
